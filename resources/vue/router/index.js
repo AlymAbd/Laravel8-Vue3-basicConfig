@@ -1,61 +1,36 @@
-import {createWebHistory, createRouter} from "vue-router";
+import { createWebHistory, createRouter } from 'vue-router'
 
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Register from '../pages/Register';
-import Login from '../pages/Login';
-import Dashboard from '../pages/Dashboard';
-
-import Books from '../components/Books';
-import AddBook from '../components/AddBook';
-import EditBook from '../components/EditBook';
+import Home from '@v/pages/Home.vue'
+import Register from '@v/pages/Register.vue'
+import Login from '@v/pages/Login.vue'
+import Dashboard from '@v/pages/Dashboard.vue'
 
 export const routes = [
-    {
-        name: 'home',
-        path: '/',
-        component: Home
-    },
-    {
-        name: 'about',
-        path: '/about',
-        component: About
-    },
-    {
-        name: 'register',
-        path: '/register',
-        component: Register
-    },
-    {
-        name: 'login',
-        path: '/login',
-        component: Login
-    },
-    {
-        name: 'dashboard',
-        path: '/dashboard',
-        component: Dashboard
-    },
-    {
-        name: 'books',
-        path: '/books',
-        component: Books
-    },
-    {
-        name: 'addbook',
-        path: '/books/add',
-        component: AddBook
-    },
-    {
-        name: 'editbook',
-        path: '/books/edit/:id',
-        component: EditBook
-    },
-];
+  {
+    name: 'home',
+    path: '/',
+    component: Home,
+  },
+  {
+    name: 'register',
+    path: '/register',
+    component: Register,
+  },
+  {
+    name: 'login',
+    path: '/login',
+    component: Login,
+  },
+  {
+    name: 'dashboard',
+    path: '/dashboard',
+    component: Dashboard,
+  },
+]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes: routes,
-});
+  history: createWebHistory(),
+  routes: routes,
+})
 
-export default router;
+export default router
